@@ -11,28 +11,21 @@
     />
   </head>
   <body>
-    <header>
-      <h1>Photo Gallery</h1>
+    <div class="gallery-container">
+      <h1>My Image Gallery</h1>
+
       <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="animals">Animals</button>
         <button class="filter-btn" data-filter="architecture">
           Architecture
         </button>
-        <button class="filter-btn" data-filter="animals">Animals</button>
       </div>
-    </header>
 
-    <div class="gallery-container">
-      <div class="gallery">
+      <div class="gallery-grid">
         <!-- Images will be added dynamically by JavaScript -->
       </div>
-      <button class="nav-btn prev-btn">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <button class="nav-btn next-btn">
-        <i class="fas fa-chevron-right"></i>
-      </button>
     </div>
 
     <!-- Lightbox Modal -->
@@ -41,16 +34,16 @@
       <div class="lightbox-content">
         <img id="lightbox-img" src="" alt="" />
         <div class="lightbox-nav">
-          <button class="lightbox-prev">
+          <button class="nav-btn prev-btn">
             <i class="fas fa-chevron-left"></i>
           </button>
-          <button class="lightbox-next">
+          <button class="nav-btn next-btn">
             <i class="fas fa-chevron-right"></i>
           </button>
         </div>
         <div class="image-info">
-          <h3 id="image-title"></h3>
-          <p id="image-desc"></p>
+          <span id="image-caption"></span>
+          <span id="image-index"></span>
         </div>
       </div>
     </div>
